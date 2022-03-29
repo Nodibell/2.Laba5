@@ -54,10 +54,7 @@ public class Main {
         //adding products which we need to buy
         wife.addProductToShopList("potato");
         wife.addProductToShopList("Samsung");
-        wife.addProductToShopList("bread");
-        wife.addProductToShopList("Huawei");
-        wife.addProductToShopList("milk");
-
+        wife.addProductToShopList("Samsung");
         wife.sendListTo(husband);
 
         //husband goes to shops

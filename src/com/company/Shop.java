@@ -11,6 +11,7 @@ abstract class Shop {
     String showProduct(int i){
         return shop.get(i).getName();
     }
+
     double sellProduct(int i){
         return shop.get(i).getPrice();
     }

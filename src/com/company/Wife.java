@@ -5,7 +5,7 @@ public class Wife extends Human {
         if (!list.shopList.isEmpty()){
             System.out.print("!!! Wife: Is it too difficult for you to buy everything from this list?!!");
         } else {
-            System.out.print("<3 Wife: Thanks, my love. I always knew that I can count on you!");
+            System.out.print("<3 Wife: Thanks, honey. I always knew that I can count on you!");
         }
     }
     @Override

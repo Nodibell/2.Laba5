@@ -4,7 +4,7 @@ import java.util.ArrayList;
 abstract class Human {
     ArrayList<Product> shopList = new ArrayList<>();
 
-    ArrayList<Product> getShopList() {
+     ArrayList<Product> getShopList() {
         return shopList;
     }
 
