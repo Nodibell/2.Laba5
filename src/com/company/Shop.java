@@ -8,8 +8,8 @@ abstract class Shop {
     void addProduct (String name, double price){
         shop.add(new Product(name, price));
     }
-    String showProduct(int i){
-        return shop.get(i).getName();
+    String showProductName(int index){
+        return shop.get(index).getName();
     }
 
     double sellProduct(int i){

@@ -16,15 +16,15 @@ public class Husband extends Human {
     //husband checks the products from the list on possibility to buy in the shop he came to
         public void checkAndBuy(Shop list) {
             ArrayList<Product> forRemove = new ArrayList<>();
-            for (Product value : shopList)
+            for (Product product : shopList)
                 for (int j = 0; j < list.shop.size(); j++) {
-                    if (list.showProduct(j).equals(value.getName())) {
-                        System.out.print("The product \"" + (value.getName()) + "\" was bought.\n");
+                    if ((list.showProductName(j) != null) && (list.showProductName(j).equals(product.getName()))) {
+                        System.out.print("The product \"" + (product.getName()) + "\" was bought.\n");
                         buyProduct(list.sellProduct(j));
-                        forRemove.add(value);
+                        forRemove.add(product);
                     }
                 }
-            cleanerForList(forRemove);
+            cleanBoughtProducts(forRemove);
         if (!shopList.isEmpty()) {
             System.out.print("§œ∑ Husband: Unfortunately, I didn't buy: \n");
             for (Product product : shopList) {
@@ -35,7 +35,7 @@ public class Husband extends Human {
     }
 
     //removes the products which were bought from the shopping list
-    public void cleanerForList (ArrayList<Product> list){
+    public void cleanBoughtProducts(ArrayList<Product> list){
         for (Product product:list) {
             for (int i = 0; i < shopList.size(); i++) {
                 if (product.equals(shopList.get(i))){
